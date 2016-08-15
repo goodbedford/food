@@ -1,2 +1,29 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
 body {
-  color: red; }
+  color: #401919;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0; }
+
+.btn {
+  display: inline-block;
+  font-size: 1.6rem;
+  margin: 0.5rem 1rem;
+  min-width: 10rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.5s ease-in-out;
+  background: linear-gradient(60deg, #ff6666 50%, #ff9999 50%);
+  color: #401919;
+  border: 1px solid red; }
+
+.btn:hover {
+  text-decoration: none;
+  background: linear-gradient(60deg, #ff4d4d 70%, #ff8080 30%); }

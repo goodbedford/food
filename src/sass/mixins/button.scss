@@ -1,0 +1,17 @@
+@import '../fonts';
+
+@mixin btn-default {
+  display: inline-block;
+  font-size: $font-size-md;
+  margin: 0.5rem 1rem;
+  min-width: 10rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin btn-default-hover {
+  text-decoration: none;
+}

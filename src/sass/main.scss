@@ -1,7 +1,7 @@
-$color-red: red;
-$color-dark: darken(purple, 40%);
+
+@import 'base';
+@import 'colors';
+@import 'fonts';
 
 
-body {
-  color: $color-red;
-}
+@import 'components/button';

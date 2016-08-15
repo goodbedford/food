@@ -16,12 +16,13 @@ var PATH = {
   css: path.join(__dirname, 'src', 'css/**/*.css'),
   cssDist: path.join(__dirname, 'src','css'),
   dist: path.join(__dirname, 'dist'),
+  sassSrc: path.join(__dirname, 'src', 'sass/**/main.scss'),
   sass: path.join(__dirname, 'src', 'sass/**/*.scss'),
   jsSrc: path.join(__dirname, 'src', 'js/**/*.js')
 }
 
 gulp.task('sass', function() {
-  return gulp.src(PATH.sass)
+  return gulp.src(PATH.sassSrc)
     .pipe(sass().on('error',sass.logError))
     .pipe(gulp.dest(PATH.cssDist))
 });
@@ -33,6 +34,16 @@ gulp.task('css', function() {
     }))
     .pipe(gulp.dest(PATH.dist));
 });
+gulp.task('styles', function() {
+  return gulp.src(PATH.sassSrc)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(PATH.cssDist))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(gulp.dest(PATH.dist))
+})
 gulp.task('lint', function() {
   return gulp.src(PATH.jsSrc)
     .pipe(jshint())
@@ -58,7 +69,7 @@ gulp.task('clean', function() {
 
 });
 
-gulp.task('default',['clean', 'sass', 'css', 'scripts'], function() {
+gulp.task('default',['clean', 'styles', 'scripts'], function() {
   gulp.watch(PATH.sass, ['sass']);
   gulp.watch(PATH.css, ['css']);
   gulp.watch(PATH.jsSrc, ['scripts']);

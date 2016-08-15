@@ -1,0 +1,11 @@
+//
+// mixins backgrounds
+//
+@import '../colors';
+
+@mixin background-01 {
+  background: linear-gradient(60deg, lighten($color-red, 20%) 50%, lighten($color-red, 30%) 50%);
+}
+@mixin background-01-hover {
+  background: linear-gradient(60deg, lighten($color-red, 15%) 70%, lighten($color-red, 25%) 30%);
+}

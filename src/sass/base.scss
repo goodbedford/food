@@ -1,0 +1,18 @@
+//
+// base
+//
+@import 'colors';
+@import 'fonts';
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  color: $color-dark;
+  font-size: $font-size-md;
+  margin: 0;
+  padding: 0;
+}
