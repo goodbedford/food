@@ -7,6 +7,8 @@ var jshintStylish = require('jshint-stylish');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var del = require('del');
+var imagemin = require('gulp-imagemin');
+
 // error handler for uglify view docs https://github.com/terinjokes/gulp-uglify
 // var pump = require('pump');
 //use for images
@@ -18,7 +20,9 @@ var PATH = {
   dist: path.join(__dirname, 'dist'),
   sassSrc: path.join(__dirname, 'src', 'sass/**/main.scss'),
   sass: path.join(__dirname, 'src', 'sass/**/*.scss'),
-  jsSrc: path.join(__dirname, 'src', 'js/**/*.js')
+  jsSrc: path.join(__dirname, 'src', 'js/**/*.js'),
+  images: path.join(__dirname, 'src', 'images/**'),
+  imagesDist: path.join(__dirname, 'dist', 'images');
 }
 
 gulp.task('sass', function() {
@@ -66,10 +70,16 @@ gulp.task('scripts', function() {
 
 gulp.task('clean', function() {
   return del([PATH.dist]);
-
 });
 
-gulp.task('default',['clean', 'styles', 'scripts'], function() {
+gulp.task('images', function() {
+  return gulp.src(PATH.images)
+    .pipe(imagemin())
+    .pipe(gulp.dest(PATH.imagesDist))
+});
+
+gulp.task('default',['clean', 'images','styles', 'scripts'], function() {
+  gulp.watch(PATH.images, ['images']);
   gulp.watch(PATH.sass, ['sass']);
   gulp.watch(PATH.css, ['css']);
   gulp.watch(PATH.jsSrc, ['scripts']);
