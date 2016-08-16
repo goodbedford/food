@@ -1,4 +1,5 @@
 @import '../fonts';
+@import '../colors';
 
 @mixin btn-default {
   display: inline-block;
@@ -14,4 +15,9 @@
 
 @mixin btn-default-hover {
   text-decoration: none;
+}
+
+
+@mixin link-default {
+  color: $color-green;
 }
