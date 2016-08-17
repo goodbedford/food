@@ -1,0 +1,58 @@
+//
+// component feature
+//
+@import '../colors';
+@import '../fonts';
+@import '../mixins/link';
+@import '../mixins/transition';
+.features {}
+
+.feature {
+  // position: relative;
+}
+.feature__credit {
+  color: $color-gray;
+  font-size: $font-size-xs;
+  padding: 1rem 0rem;
+  text-align: right;
+}
+.feature__img-container {
+  background-color: $color-gray-lite;
+  max-height: 24rem;
+  min-height: 24rem;
+  overflow: hidden;
+  width: 100%;
+}
+.feature__img-container__img {
+  width: 100%;
+}
+.feature__link {
+  @include link-plain;
+  @include transition-default;
+  bottom: 0px;
+  position: absolute;
+  width: 100%;
+}
+.feature__link:hover {
+  opacity: 0.7;
+}
+.feature__link__title {
+  background-color: rgba($color-white, 0.8);
+  color: $color-black;
+  font-size: $font-size-md;
+  padding: 1rem;
+  text-transform: capitalize;
+}
+.feature__link__description {
+  background-color: $color-black;
+  color: $color-white;
+  font-size: $font-size-sm;
+  padding: 1rem;
+}
+.feature__section {
+  position: relative;
+}
+
+@media screen and (min-width: 480px) {
+
+}

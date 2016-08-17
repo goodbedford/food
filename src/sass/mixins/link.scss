@@ -1,0 +1,20 @@
+//
+// mixins link
+//
+@import '../fonts';
+@import '../colors';
+
+@mixin link-default {
+  color: $color-green;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+@mixin link-default-hover {
+  color: $color-rust;
+  text-decoration: none;
+}
+
+@mixin link-plain {
+  color: inherit;
+  text-decoration: none;
+}

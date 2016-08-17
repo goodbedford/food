@@ -1,0 +1,36 @@
+//
+// component post
+//
+@import '../colors';
+@import '../fonts';
+@import '../mixins/link';
+@import '../mixins/transition';
+
+.posts {}
+
+.post {}
+.post__date {
+  color: $color-gray;
+  font-size: $font-size-sm;
+}
+.post__link {
+  @include link-plain;
+}
+.post__link--more {}
+.post__link__img-container {
+  background-color: $color-white;
+  border: 1px solid $color-gray-lite;
+  height: 19rem;
+  overflow: hidden;
+  padding: 1rem;
+  width: 30rem;
+}
+.post__link__img-container__img {
+  background-color: $color-white;
+  overflow: hidden;
+  width: 100%;
+}
+.post__link__title {
+  font-size: $font-size-md;
+}
+.post__text {}

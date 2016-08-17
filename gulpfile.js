@@ -17,12 +17,13 @@ var imagemin = require('gulp-imagemin');
 var PATH = {
   css: path.join(__dirname, 'src', 'css/**/*.css'),
   cssDist: path.join(__dirname, 'src','css'),
+  delete: './dist/**/*',
   dist: path.join(__dirname, 'dist'),
+  images: path.join(__dirname, 'src', 'images/**/*'),
+  imagesDist: path.join(__dirname, 'dist', 'images'),
+  jsSrc: path.join(__dirname, 'src', 'js/**/*.js'),
   sassSrc: path.join(__dirname, 'src', 'sass/**/main.scss'),
   sass: path.join(__dirname, 'src', 'sass/**/*.scss'),
-  jsSrc: path.join(__dirname, 'src', 'js/**/*.js'),
-  images: path.join(__dirname, 'src', 'images/**'),
-  imagesDist: path.join(__dirname, 'dist', 'images');
 }
 
 gulp.task('sass', function() {
@@ -69,7 +70,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('clean', function() {
-  return del([PATH.dist]);
+  return del([PATH.delete]);
 });
 
 gulp.task('images', function() {

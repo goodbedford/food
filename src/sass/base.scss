@@ -11,8 +11,14 @@ html {
   font-size: 62.5%;
 }
 body {
-  color: $color-dark;
+  color: $color-black;
   font-size: $font-size-md;
   margin: 0;
+  min-width: 300px;
   padding: 0;
+}
+
+//test class
+.red {
+  border: 1px solid red;
 }

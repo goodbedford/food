@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>food</title>
+  <title>foodie</title>
   <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="./dist/main.css">
@@ -13,13 +13,60 @@
 <body>
   <div class="container">
     <header>
-      <nav class="menu">
+      <nav class="menu menu--sm">
+        <div class="menu__section menu__section--border-bottom menu__section--right">
+          <a href="#" class="menu__link">tastemakers</a>
+          <a href="#" class="menu__link">blog</a>
+          <a href="#" class="menu__link">the a-list</a>
+          <a href="#" class="menu__link">contribute</a>
+          <a href="#" class="menu__link">about</a>
+        </div>
+        <div class="menu__section menu__section--left">
+          <div class="menu__img-container ani-logo-in">
+            <div class="menu__img-container__img">foodie</div>
+          </div>
+        </div>
       </nav>
     </header>
     <div class="main-content row">
-      <section class="feature"></section>
-      <section class="newsletter"></section>
-      <section class="posts"></section>
+      <section class="features">
+        <section class="feature">
+          <div class="feature__section">
+            <div class="feature__img-container">
+              <img src="dist/images/food/tomato.jpg" alt="feature image" class="feature__img-container__img">
+            </div>
+            <a href="#" class="feature__link">
+              <div class="feature__link__title">Read, Learn, Share</div>
+              <div class="feature__link__description">Get daily how-tos, stories & updates with the latest news.</div>
+            </a>
+          </div>
+          <div class="feature__credit">*photo by Bedford Williamson</div>
+        </section>
+      </section>
+      <section class="newsletter">
+        <div class="newsletter__section">
+          <i class="newsletter__icon fa fa-envelope-o" aria-hidden="true"></i>
+          <div class="newsletter__text">Sign up for our newsletter to receive a handpicked selection of the best stories, recipes and news, delivered weekly to your inbox.
+          </div>
+        </div>
+        <div class="newsletter__section">
+          <input class="newsletter__input" placeholder="Email">
+          <a href="#" class="newsletter__btn">Subscribe</a>
+        </div>
+      </section>
+      <section class="posts">
+        <article class="post">
+          <a href="#" class="post__link">
+            <div class="post__link__img-container">
+              <img src="dist/images/food/grapes.jpg" alt="watermelon" class="post__link__img-container__img">
+            </div>
+            <div class="post__link__title">2016's Best Summer Cookbooks</div>
+          </a>
+          <div class="post__text">Stay active and healthy this summer by following this simple guide. We will walk you through making your own fruit preserves and light calorie salad dressings.
+          </div>
+          <span class="post__date">June 17th</span>/<span class="post__link post__link--more">Read >></span>
+        </article>
+      </section>
     </div>
     <footer class="footer">
       <div class="footer-section footer-section--left">

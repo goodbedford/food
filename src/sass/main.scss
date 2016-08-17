@@ -1,9 +1,15 @@
-
+//
+// main
+//
 @import 'base';
 @import 'colors';
 @import 'fonts';
-
+@import 'layout';
+@import 'animation/logo';
 
 @import 'components/button';
 @import 'components/menu';
-// @import ''
+@import 'components/feature';
+@import 'components/newsletter';
+@import 'components/post';
+@import 'components/footer';
