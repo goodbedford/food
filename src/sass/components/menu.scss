@@ -100,6 +100,7 @@
     transform: translateY(0.2rem);
   }
   .menu__link__icon {
+    @include transition-default;
     display: flex;
     padding: 0.5rem 0rem;
   }

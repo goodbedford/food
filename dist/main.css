@@ -166,6 +166,7 @@ body {
   .menu__link:hover .menu__link__icon {
     transform: translateY(0.2rem); }
   .menu__link__icon {
+    transition: 0.3s all;
     display: -ms-flexbox;
     display: flex;
     padding: 0.5rem 0rem; } }
