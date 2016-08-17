@@ -112,6 +112,9 @@ body {
   color: #EC6635;
   text-decoration: none; }
 
+.menu__link__icon {
+  display: none; }
+
 .menu__section {
   display: -ms-flexbox;
   display: flex;
@@ -151,10 +154,26 @@ body {
     -ms-flex: 2 1 auto;
     flex: 2 1 auto; } }
 
+@media screen and (min-width: 768px) {
+  .menu__link {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 1.6rem; }
+  .menu__link:hover .menu__link__icon {
+    transform: translateY(0.2rem); }
+  .menu__link__icon {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.5rem 0rem; } }
+
 .feature__credit {
   color: #AAAAAA;
   font-size: 1rem;
-  padding: 1rem 0rem;
+  padding: 1rem 0.5rem;
   text-align: right; }
 
 .feature__img-container {
@@ -194,10 +213,29 @@ body {
 .feature__section {
   position: relative; }
 
+@media screen and (min-width: 768px) {
+  .feature__credit {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    color: #333333;
+    display: inline-block;
+    left: 80%;
+    padding: 0.5rem;
+    position: relative;
+    transform: translateY(-120%); }
+  .feature__link {
+    bottom: 25%;
+    width: auto; }
+  .feature__link__title {
+    display: inline-block;
+    font-size: 2.6rem; }
+  .feature__link__description {
+    display: block;
+    font-size: 1.6rem; } }
+
 .newsletter {
   border-top: 1px dashed #E5E5E5;
   border-bottom: 1px dashed #E5E5E5;
-  margin-bottom: 3rem;
   padding: 1rem; }
 
 .newsletter__btn {
@@ -266,40 +304,115 @@ body {
   -ms-flex: 2 2 auto;
   flex: 2 2 auto; }
 
+@media screen and (min-width: 768px) {
+  .newsletter {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between; } }
+
+.posts {
+  margin: 1rem 2rem; }
+
+.post {
+  margin: 3rem auto;
+  width: 100%; }
+
 .post__date {
   color: #AAAAAA;
-  font-size: 1.2rem; }
+  font-size: 1.6rem; }
 
 .post__link {
   color: inherit;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: 0.2s color;
+  color: #34AC98;
+  border-bottom: 1px dashed #E5E5E5; }
+
+.post__link:hover {
+  color: inherit;
+  text-decoration: none;
+  color: #EC6635; }
+
+.post__link--more {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.2s color;
+  color: #34AC98; }
 
 .post__link__img-container {
-  background-color: white;
-  border: 1px solid #E5E5E5;
-  height: 19rem;
-  overflow: hidden;
-  padding: 1rem;
-  width: 30rem; }
+  display: block;
+  position: relative; }
 
-.post__link__img-container__img {
-  background-color: white;
+.post__link__thumbnail-container {
   overflow: hidden;
   width: 100%; }
 
+.post__link__thumbnail-container:after {
+  transition: 0.3s all;
+  background-color: white;
+  display: block;
+  content: "";
+  opacity: 0; }
+
+.post__link:hover .post__link__thumbnail-container:after {
+  background-color: white;
+  bottom: 0px;
+  content: "";
+  display: block;
+  left: 0px;
+  opacity: 0.2;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 20; }
+
+.post__link__thumbnail-container__img {
+  transition: 1s all;
+  background-color: white;
+  border: 1px solid #E5E5E5;
+  box-shadow: 1px 1px 3px #F5F5F5;
+  overflow: hidden;
+  width: 100%; }
+
+.post__link:hover .post__link__thumbnail-container__img {
+  transform: scale(1.2); }
+
 .post__link__title {
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  padding: 1rem 0rem; }
+
+.post__text {
+  padding-bottom: 1rem; }
+
+@media screen and (min-width: 480px) {
+  .posts {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .post {
+    margin: 3rem 2rem;
+    width: calc(50% - 4rem); } }
+
+@media screen and (min-width: 768px) {
+  .post {
+    margin: 3rem 1rem;
+    width: calc(25% - 2rem); } }
 
 .footer {
   -ms-flex-align: start;
   align-items: flex-start;
+  border-top: 1px solid #E5E5E5;
   color: #AAAAAA;
   display: -ms-flexbox;
   display: flex;
   font-size: 1rem;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 1rem; }
+  padding: 2rem 1rem; }
 
 .footer__icon {
   transition: 0.2s color;

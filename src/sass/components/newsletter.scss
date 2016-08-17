@@ -9,7 +9,6 @@
 .newsletter {
   border-top: 1px dashed $color-gray-lite;
   border-bottom: 1px dashed $color-gray-lite;
-  margin-bottom: 3rem;
   padding: 1rem;
 }
 .newsletter__btn {
@@ -61,4 +60,11 @@
 .newsletter__text {
   font-size: $font-size-sm;
   flex: 2 2 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .newsletter {
+    display: flex;
+    justify-content: space-between;
+  }
 }
