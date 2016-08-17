@@ -21,6 +21,8 @@
   justify-content: center;
   position: relative;
   width: 10rem;
+  transform: translateY(20rem);
+
 }
 /* possible different logo design using ::after
 .menu__img-container:after {
@@ -41,7 +43,6 @@
   font-size: $font-size-lg;
   margin: 2rem 0rem;
   text-transform: capitalize;
-
 }
 
 .menu__link {

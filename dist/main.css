@@ -79,7 +79,8 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   position: relative;
-  width: 10rem; }
+  width: 10rem;
+  transform: translateY(20rem); }
 
 /* possible different logo design using ::after
 .menu__img-container:after {
