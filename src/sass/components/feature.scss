@@ -6,22 +6,21 @@
 @import '../mixins/link';
 @import '../mixins/transition';
 .features {}
-
 .feature {
   // position: relative;
 }
 .feature__credit {
-  color: $color-gray;
-  font-size: $font-size-xs;
-  padding: 1rem 0.5rem;
+  color     : $color-gray;
+  font-size : $font-size-xs;
+  padding   : 1rem 0.5rem;
   text-align: right;
 }
 .feature__img-container {
   background-color: $color-gray-lite;
-  max-height: 24rem;
-  min-height: 24rem;
-  overflow: hidden;
-  width: 100%;
+  max-height      : 24rem;
+  min-height      : 24rem;
+  overflow        : hidden;
+  width           : 100%;
 }
 .feature__img-container__img {
   width: 100%;
@@ -29,52 +28,60 @@
 .feature__link {
   @include link-plain;
   @include transition-default;
-  bottom: 0px;
+  bottom  : 0;
   position: absolute;
-  width: 100%;
+  width   : 100%;
 }
 .feature__link:hover {
   opacity: 0.7;
 }
 .feature__link__title {
   background-color: rgba($color-white, 0.8);
-  color: $color-black;
-  font-size: $font-size-md;
-  padding: 1rem;
-  text-transform: capitalize;
+  color           : $color-black;
+  font-size       : $font-size-md;
+  padding         : 1rem;
+  text-transform  : capitalize;
 }
 .feature__link__description {
   background-color: $color-black;
-  color: $color-white;
-  font-size: $font-size-sm;
-  padding: 1rem;
+  color           : $color-white;
+  font-size       : $font-size-sm;
+  padding         : 1rem;
 }
 .feature__section {
   position: relative;
 }
-
 @media screen and (min-width: 768px) {
-
   .feature__credit {
     background-color: rgba($color-white, 0.8);
-    border-radius: 5px;
-    color: $color-gray-dark;
-    display: inline-block;
-    left: 80%;
-    padding: 0.5rem;
-    position: relative;
-    transform: translateY(-120%);
+    border-radius   : 5px;
+    color           : $color-gray-dark;
+    display         : inline-block;
+    left            : 75%;
+    padding         : 0.5rem;
+    position        : relative;
+    transform       : translateY(-120%);
   }
   .feature__link {
     bottom: 25%;
-    width: auto;
+    width : auto;
   }
   .feature__link__title {
-    display: inline-block;
-    font-size: $font-size-lg;
+    background-color: rgba($color-white, 1);
+    display         : inline-block;
+    font-size       : $font-size-lg;
   }
   .feature__link__description {
-    display:block;
-    font-size: $font-size-md;
+    display    : block;
+    font-size  : $font-size-md;
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+@media screen and (min-width: 992px) {
+  .feature__img-container {
+    max-height: 34rem;
+    min-height: 34rem;
+    overflow  : hidden;
+    width     : 100%;
   }
 }

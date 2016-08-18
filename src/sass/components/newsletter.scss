@@ -5,23 +5,23 @@
 @import '../fonts';
 @import '../mixins/button';
 @import '../mixins/transition';
-
 .newsletter {
-  border-top: 1px dashed $color-gray-lite;
+  border-top   : 1px dashed $color-gray-lite;
   border-bottom: 1px dashed $color-gray-lite;
-  padding: 1rem;
+  font-family  : 'Open Sans', sans-serif;
+  padding      : 1rem;
 }
 .newsletter__btn {
   @include btn-default;
   background-color: $color-gray-lite;
   // background: linear-gradient($color-white,$color-gray-lite 50%, $color-gray 90%);
-  border: 1px solid black;
-  color: $color-gray-dark;
-  display: inline-block;
-  flex: 0 0 auto;
-  font-size: $font-size-sm;
-  margin: 0px 1rem;
-  position: relative;
+  border          : 1px solid black;
+  color           : $color-gray-dark;
+  display         : inline-block;
+  flex            : 0 0 auto;
+  font-size       : $font-size-sm;
+  margin          : 0 1rem;
+  position        : relative;
 }
 .newsletter__btn:hover {
   @include btn-default-hover;
@@ -31,40 +31,39 @@
 .newsletter__btn:hover:after {
   @include transition-default;
   background-color: $color-green;
-  content: "";
-  display: block;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top:0;
-  left: 0;
-  opacity: 0.3;
+  content         : "";
+  display         : block;
+  position        : absolute;
+  height          : 100%;
+  width           : 100%;
+  top             : 0;
+  left            : 0;
+  opacity         : 0.3;
 }
 .newsletter__icon {
-  flex: 1 1 auto;
+  flex     : 1 1 auto;
   font-size: $font-size-lg;
-  margin: 0rem 1rem;
+  margin   : 0 1rem;
 }
 .newsletter__input {
-  border: 1px solid $color-gray;
-  flex: 1 1 20rem;
-  font-size: $font-size-md;
+  border     : 1px solid $color-gray;
+  flex       : 1 1 20rem;
+  font-size  : $font-size-md;
   text-indent: 0.5rem;
 }
 .newsletter__section {
-  align-items: center;
-  display: flex;
+  align-items    : center;
+  display        : flex;
   justify-content: space-between;
-  padding: 1rem 0rem;
+  padding        : 1rem 0;
 }
 .newsletter__text {
   font-size: $font-size-sm;
-  flex: 2 2 auto;
+  flex     : 2 2 auto;
 }
-
 @media screen and (min-width: 768px) {
   .newsletter {
-    display: flex;
+    display        : flex;
     justify-content: space-between;
   }
 }
