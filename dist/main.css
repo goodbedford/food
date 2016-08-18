@@ -106,7 +106,7 @@ p {
   align-items: center;
   background-color: black;
   background: linear-gradient(180deg, rgba(52, 172, 152, 0.5) 30%, #EC6635 30%);
-  border: 10px solid black;
+  border: 8px solid black;
   border-radius: 50%;
   display: -ms-flexbox;
   display: flex;
