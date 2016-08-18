@@ -402,14 +402,14 @@ p {
 
 .post__link:hover .post__link__thumbnail-container:after {
   background-color: white;
-  bottom: 0px;
+  bottom: 0;
   content: "";
   display: block;
-  left: 0px;
+  left: 0;
   opacity: 0.2;
   position: absolute;
-  right: 0px;
-  top: 0px;
+  right: 0;
+  top: 0;
   z-index: 20; }
 
 .post__link__thumbnail-container__img {
@@ -425,7 +425,7 @@ p {
 
 .post__link__title {
   font-size: 1.6rem;
-  padding: 1rem 0rem; }
+  padding: 1rem 0; }
 
 .post__text {
   font-family: 'Open Sans', sans-serif;
