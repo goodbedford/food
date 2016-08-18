@@ -146,7 +146,7 @@ body {
   .menu__link:hover .menu__link__icon {
     transform: translateY(0.2rem); }
   .menu__link__icon {
-    transition: 0.3s all;
+    transition: transition-transform-default;
     display: flex;
     padding: 0.5rem 0rem; } }
 
@@ -169,7 +169,7 @@ body {
 .feature__link {
   color: inherit;
   text-decoration: none;
-  transition: 0.3s all;
+  transition: 0.2s all;
   bottom: 0px;
   position: absolute;
   width: 100%; }
@@ -245,7 +245,7 @@ body {
   text-decoration: none; }
 
 .newsletter__btn:hover:after {
-  transition: 0.3s all;
+  transition: 0.2s all;
   background-color: #34AC98;
   content: "";
   display: block;
@@ -320,7 +320,7 @@ body {
   width: 100%; }
 
 .post__link__thumbnail-container:after {
-  transition: 0.3s all;
+  transition: 0.2s all;
   background-color: white;
   display: block;
   content: "";

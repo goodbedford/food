@@ -3,7 +3,7 @@
 //
 
 @mixin transition-default {
-  transition: 0.3s all;
+  transition: 0.2s all;
 }
 @mixin transition-color-default {
   transition: 0.2s color;
@@ -13,4 +13,9 @@
 }
 @mixin transition-md {
   transition: 1s all;
+}
+
+
+@mixin transition-transform-default {
+  transition: 0.2s transform;
 }

@@ -101,7 +101,8 @@
     transform: translateY(0.2rem);
   }
   .menu__link__icon {
-    @include transition-default;
+    transition: transition-transform-default;
+    // transition: color 0.2s, transform 1s;
     display: flex;
     padding: 0.5rem 0rem;
   }
