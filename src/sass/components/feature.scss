@@ -84,7 +84,7 @@
   border-right    : 1px solid lighten($color-green,40%);
   color           : $color-green;
   flex            : 1 1;
-  padding         : 0.8rem;
+  padding         : 2rem;
   text-align      : center;
   transform       : translateY(-2.4rem);
 }
@@ -134,7 +134,7 @@
 @media screen and (min-width: 992px) {
   .features {
     overflow: hidden;
-    height  : 37.9rem;
+    height  : 40.3rem;
     position: relative;
     width   : 100%;
   }

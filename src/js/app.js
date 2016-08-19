@@ -1,6 +1,6 @@
 "use strict";
 console.log("I am here in app.js");
-
+// var $featureMenu = $(".feature_menu");
 var $featureMenuLinks = $(".feature__menu__link");
 var $features = $(".features");
 var activate = activate;
@@ -9,17 +9,23 @@ var featureSideToggle = featureSideToggle;
 var featureSideOff = featureSideOff;
 var featureActiveLink = featureActiveLink;
 var animationFade = animationFade;
-
+var featureAnimationOn = featureAnimationOn;
+var clearFeatureTimer = clearFeatureTimer;
+var startFeatureTimer = startFeatureTimer;
 activate();
 
 function activate() {
+  var timer = {
+    timer: featureAnimationOn()
+  };
   $featureMenuLinks.on("click", featureMenuHandler);
+  $features.on("mouseenter", timer, clearFeatureTimer);
+  $features.on("mouseleave", timer, startFeatureTimer);
 }
 
 function featureMenuHandler(event) {
-  console.log(event.type, "on", event.target);
+  // console.log(event.type, "on", event.target);
   var dataType = $(this).data("link");
-  // console.log("data",$(this).data("link") );
   switch (dataType) {
     case "tastemakers-feature":
       console.log("clicked tastemakers", dataType);
@@ -52,20 +58,17 @@ function featureSideToggle(type) {
   var $prevFeature = $features.find(".feature--active");
   var animations = {
     fadeIn: "ani-fade-in"
-  }
-  console.log("single", $features.find(".feature"));
+  };
   $prevFeature.removeClass("feature--active");
   $feature.addClass("feature--active");
   animationFade($feature, animations.fadeIn);
-
-  console.log($feature);
 }
 
 function featureSideOff() {
   $features.each(function(index, feature) {
     // console.log("each", $(feature));
     $(feature).toggleClass("feature--active");
-  })
+  });
 }
 // adds active link style to current feature link
 // removes active link style from all other feature links
@@ -83,5 +86,38 @@ function animationFade(feature, animationType) {
   var imgs = $(".feature__img-container");
   imgs.removeClass(animationType);
   img.addClass(animationType);
+}
 
+function featureAnimationOn(event) {
+  var startTimer = setInterval(startAnimation, 3000);
+  return startTimer;
+}
+
+function startAnimation() {
+  var len = $featureMenuLinks.length - 1;
+  $featureMenuLinks.each(function(index, link) {
+    var $link = $(link);
+    if ($link.hasClass("feature__menu__link--active") &&
+      index === len) {
+      setTimeout(function() {
+        // console.log("clickeeed", $($featureMenuLinks[0]))
+        $($featureMenuLinks[0]).trigger("click");
+      }, 1000);
+    } else if ($link.hasClass("feature__menu__link--active")) {
+      setTimeout(function() {
+        $($featureMenuLinks[index + 1]).trigger("click");
+        // console.log("clickdd", $($featureMenuLinks[index + 1]));
+      }, 1000);
+    }
+  })
+}
+
+function clearFeatureTimer(event) {
+  // console.log("mouse enter");
+  clearInterval(event.data.timer);
+}
+
+function startFeatureTimer(event) {
+  // console.log("mouse leave");
+  event.data.timer = featureAnimationOn();
 }
