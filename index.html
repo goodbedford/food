@@ -45,10 +45,22 @@
       </header>
       <div class="main-content row">
         <section class="features">
-          <section class="feature">
+          <section id="tastemakers-feature" class="feature feature--active">
+            <div class="feature__section">
+              <div class="feature__img-container ani-fade-in">
+                <img src="dist/images/food/tomato.jpg" alt="feature image" class="feature__img-container__img">
+              </div>
+              <a href="#" class="feature__link">
+                <div class="feature__link__title">What's Cooking?</div>
+                <div class="feature__link__description">Browse our galleries for tasty family style recipes.</div>
+              </a>
+            </div>
+            <div class="feature__credit">*photo by Bedford Williamson</div>
+          </section>
+          <section id="blog-feature" class="feature">
             <div class="feature__section">
               <div class="feature__img-container">
-                <img src="dist/images/food/tomato.jpg" alt="feature image" class="feature__img-container__img">
+                <img src="dist/images/food/books2.jpg" alt="books feature image" class="feature__img-container__img">
               </div>
               <a href="#" class="feature__link">
                 <div class="feature__link__title">Read, Learn, Share</div>
@@ -57,6 +69,36 @@
             </div>
             <div class="feature__credit">*photo by Bedford Williamson</div>
           </section>
+          <section id="a-list-feature" class="feature">
+            <div class="feature__section">
+              <div class="feature__img-container">
+                <img src="dist/images/food/watermelon-yellow.jpg" alt="feature image" class="feature__img-container__img">
+              </div>
+              <a href="#" class="feature__link">
+                <div class="feature__link__title">Buy the Best</div>
+                <div class="feature__link__description">We carefully curated our best vendors.</div>
+              </a>
+            </div>
+            <div class="feature__credit">*photo by Bedford Williamson</div>
+          </section>
+          <section id="contribute-feature" class="feature">
+            <div class="feature__section">
+              <div class="feature__img-container">
+                <img src="dist/images/food/rosemary.jpg" alt="feature image" class="feature__img-container__img">
+              </div>
+              <a href="#" class="feature__link">
+                <div class="feature__link__title">Share your greatest ideas.</div>
+                <div class="feature__link__description">Submit your perfected recipies and let us vote on our favorites.</div>
+              </a>
+            </div>
+            <div class="feature__credit">*photo by Bedford Williamson</div>
+          </section>
+          <div class="feature__menu">
+            <a href="javascript:void(0)" class="feature__menu__link feature__menu__link--active" data-link="tastemakers-feature">tastemakers</a>
+            <a href="javascript:void(0)" class="feature__menu__link" data-link="blog-feature">blog</a>
+            <a href="javascript:void(0)" class="feature__menu__link" data-link="a-list-feature">the a-list</a>
+            <a href="javascript:void(0)" class="feature__menu__link" data-link="contribute-feature">contribute</a>
+          </div>
         </section>
         <section class="newsletter">
           <div class="newsletter__section">
@@ -147,7 +189,9 @@
   </div>
   <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-  <script src="dist/bundle.js"></script>
+  <!-- <script src="dist/bundle.js"></script> -->
+  <script src="src/js/app.js"></script>
+
 </body>
 
 </html>

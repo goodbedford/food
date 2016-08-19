@@ -1,21 +1,21 @@
 //
-// animation logo
+// animation slide
 //
-.ani-logo-in {
+.ani-slide-left-right {
   animation-name           : logo-in-animation;
   animation-delay          : 1s;
   animation-duration       : 1.2s;
   animation-fill-mode      : forwards;
   animation-timing-function: cubic-bezier(.42, 0, .58, 1);
 }
-@keyframes logo-in-animation {
+@keyframes slide-left-right-animation {
   0% {
-    transform: translateY(200px);
+    transform: translateX(100%);
   }
   80% {
-    transform: translateY(-20px);
+    // transform: translateY(-20px);
   }
   100% {
-    transform: translateY(0px);
+    transform: translateX(0);
   }
 }

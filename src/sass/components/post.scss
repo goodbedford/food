@@ -23,7 +23,7 @@
   border-bottom: 1px dashed $color-gray-lite;
 }
 .post__link:hover {
-  @include link-plain-default;
+  @include link-plain-hover;
   color: $color-rust;
 }
 .post__link--more {
