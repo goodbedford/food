@@ -263,6 +263,7 @@ p {
 
 .feature {
   background-color: white;
+  display: none;
   position: absolute;
   opacity: 0.5;
   transition: 0s all ease-in-out;
