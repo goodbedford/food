@@ -2,8 +2,17 @@
 // layout
 //
 .container {
-  width : 100%;
-  margin: 0 auto;
+  margin  : 0 auto;
+  overflow: hidden;
+  width   : 100%;
+}
+.container-ads {
+  display        : flex;
+  height         : 100%;
+  justify-content: space-around;
+  padding        : 0.1rem;
+  position       : relative;
+  width          : 100%;
 }
 @media screen and (min-width: 480px) {
   .container {

@@ -3,6 +3,7 @@ console.log("I am here in app.js");
 // var $featureMenu = $(".feature_menu");
 var $featureMenuLinks = $(".feature__menu__link");
 var $features = $(".features");
+var $adBtn = $(".ads__button");
 var activate = activate;
 var featureMenuHandler = featureMenuHandler;
 var featureSideToggle = featureSideToggle;
@@ -21,6 +22,11 @@ function activate() {
   $featureMenuLinks.on("click", featureMenuHandler);
   $features.on("mouseenter", timer, clearFeatureTimer);
   $features.on("mouseleave", timer, startFeatureTimer);
+
+  $adBtn.on("click", function() {
+    console.log("btn click");
+    $(this).parent(".ads").css("display", "none");
+  });
 }
 
 function featureMenuHandler(event) {
