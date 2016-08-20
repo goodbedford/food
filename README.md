@@ -11,3 +11,4 @@ role: Front End development
 
 
 **personal reference file**
+**demo project: inspired by** http://foodsense.is/
