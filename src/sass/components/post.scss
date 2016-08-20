@@ -52,7 +52,7 @@
   content         : "";
   display         : block;
   left            : 0;
-  opacity         : 0.2;
+  // opacity         : 0.2;
   position        : absolute;
   right           : 0;
   top             : 0;
@@ -63,12 +63,11 @@
   background-color: $color-white;
   border          : 1px solid $color-gray-lite;
   box-shadow      : 1px 1px 3px #F5F5F5;
-  // padding: 1rem;
   overflow        : hidden;
   width           : 100%;
 }
 .post__link:hover .post__link__thumbnail-container__img {
-  transform: scale(1.2);
+  transform: scale(1.03);
 }
 .post__link__title {
   font-size: $font-size-md;
