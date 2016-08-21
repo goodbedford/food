@@ -43,9 +43,11 @@ p {
 
 .container-ads {
   display: flex;
+  flex-wrap: wrap;
   height: 100%;
   justify-content: space-around;
-  padding: 0.1rem;
+  left: -100%;
+  padding: 1rem;
   position: relative;
   width: 100%; }
 
@@ -243,16 +245,17 @@ p {
 .ads {
   display: flex;
   justify-content: flex-start;
-  margin-top: 1rem;
+  position: relative;
   width: 200px; }
 
 .ads__button {
+  transition: 0.2s all;
   background-color: white;
   border: 1px solid black;
   color: black;
   font-size: 1rem;
   height: 2rem;
-  left: 18.0rem;
+  right: 0;
   outline: 0;
   position: absolute;
   text-align: center;
@@ -261,7 +264,8 @@ p {
 
 .ads__button:hover {
   background-color: red;
-  color: white; }
+  color: white;
+  transform: translateX(0.3rem); }
 
 .ads__link {
   color: inherit;
@@ -699,6 +703,7 @@ p {
 
 .post__link__thumbnail-container {
   overflow: hidden;
+  height: 12rem;
   width: 100%; }
 
 .post__link__thumbnail-container:after {
@@ -745,7 +750,9 @@ p {
     justify-content: space-between; }
   .post {
     margin: 3rem 2rem;
-    width: calc(50% - 4rem); } }
+    width: calc(50% - 4rem); }
+  .post__link__thumbnail-container {
+    height: auto; } }
 
 @media screen and (min-width: 768px) {
   .post {

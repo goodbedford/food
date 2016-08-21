@@ -29,6 +29,11 @@ function activate() {
   });
 }
 
+function closeAd(event) {
+  $(this).parent(".ads").css("display", "none");
+
+}
+
 function featureMenuHandler(event) {
   // console.log(event.type, "on", event.target);
   var dataType = $(this).data("link");
