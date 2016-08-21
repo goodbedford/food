@@ -156,19 +156,21 @@ p {
   100% {
     left: 9rem; } }
 
-@keyframes slide-up-animation {
+.ani-slide-in-up {
+  animation-name: slide-in-up-animation;
+  animation-delay: 1s;
+  animation-duration: 3.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
+
+.pre-ani-slide-in-up {
+  transform: translateY(100%); }
+
+@keyframes slide-in-up-animation {
   0% {
     transform: translateY(100%); }
-  40% {
-    transform: translateY(0%); }
-  70% {
-    transform: translateY(0%); }
-  80% {
-    transform: translateY(-50%); }
-  90% {
-    transform: translateY(-150%); }
   100% {
-    transform: translateY(-150%); } }
+    transform: translateY(0%); } }
 
 .ani-slide-right-left {
   animation-name: slide-right-left-animation;

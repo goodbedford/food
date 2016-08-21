@@ -13,6 +13,7 @@ var animationFade = animationFade;
 var featureAnimationOn = featureAnimationOn;
 var clearFeatureTimer = clearFeatureTimer;
 var startFeatureTimer = startFeatureTimer;
+var closeAd = closeAd;
 activate();
 
 function activate() {
@@ -23,10 +24,7 @@ function activate() {
   $features.on("mouseenter", timer, clearFeatureTimer);
   $features.on("mouseleave", timer, startFeatureTimer);
 
-  $adBtn.on("click", function() {
-    console.log("btn click");
-    $(this).parent(".ads").css("display", "none");
-  });
+  $adBtn.on("click", closeAd);
 }
 
 function closeAd(event) {
