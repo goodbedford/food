@@ -66,21 +66,23 @@
 }
 .ani-slide-in-up {
   animation-name           : slide-in-up-animation;
-  animation-delay          : 1s;
-  animation-duration       : 3.2s;
+  animation-duration       : 1.5s;
   animation-fill-mode      : forwards;
   // animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(.42, 0, .58, 1);
 }
 .pre-ani-slide-in-up {
+  opacity  : 0;
   transform: translateY(100%);
 }
 @keyframes slide-in-up-animation {
   0% {
-    transform: translateY(100%);
+    opacity  : 0;
+    transform: translateY(2rem);
   }
   100% {
-    transform: translateY(0%);
+    opacity  : 1;
+    transform: translateY(0);
   }
 }
 .ani-slide-right-left {

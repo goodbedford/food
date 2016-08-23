@@ -11,6 +11,7 @@ $ads-font-size-md: 2.4rem;
 .ads {
   display        : flex;
   justify-content: flex-start;
+  margin         : 0.5rem;
   position       : relative;
   width          : 200px;
 }
@@ -101,4 +102,9 @@ $ads-font-size-md: 2.4rem;
 .ads__text--white {
   color: $color-white;
   // font-size: $font-size-lg;
+}
+@media screen and (max-width: 479px) {
+  .ads__hide {
+    display: none;
+  }
 }

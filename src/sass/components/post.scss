@@ -6,7 +6,8 @@
 @import '../mixins/link';
 @import '../mixins/transition';
 .posts {
-  margin: 1rem 2rem;
+  margin  : 1rem 2rem;
+  overflow: hidden;
 }
 .post {
   margin: 3rem auto;

@@ -163,19 +163,21 @@ p {
 
 .ani-slide-in-up {
   animation-name: slide-in-up-animation;
-  animation-delay: 1s;
-  animation-duration: 3.2s;
+  animation-duration: 1.5s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
 
 .pre-ani-slide-in-up {
+  opacity: 0;
   transform: translateY(100%); }
 
 @keyframes slide-in-up-animation {
   0% {
-    transform: translateY(100%); }
+    opacity: 0;
+    transform: translateY(2rem); }
   100% {
-    transform: translateY(0%); } }
+    opacity: 1;
+    transform: translateY(0); } }
 
 .ani-slide-right-left {
   animation-name: slide-right-left-animation;
@@ -254,6 +256,7 @@ p {
   display: flex;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  margin: 0.5rem;
   position: relative;
   width: 200px; }
 
@@ -356,6 +359,10 @@ p {
 
 .ads__text--white {
   color: white; }
+
+@media screen and (max-width: 479px) {
+  .ads__hide {
+    display: none; } }
 
 .menu {
   background-color: white;
@@ -737,7 +744,8 @@ p {
     justify-content: space-between; } }
 
 .posts {
-  margin: 1rem 2rem; }
+  margin: 1rem 2rem;
+  overflow: hidden; }
 
 .post {
   margin: 3rem auto;
